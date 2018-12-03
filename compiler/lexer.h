@@ -13,11 +13,19 @@
 #define ASSIN 258
 #define LE 259
 #define GE 260
-
-enum type
-{
-	CONSTSYM = 128, VARSYM, PROSYM, BEGINSYM, ENDSYM, IFSYM, THENSYM, CALLSYM, WHILESYM, DOSYM, READSYM, WRITESYM
-};
+#define CONSTSYM 128 
+#define VARSYM 129
+#define PROSYM 130
+#define BEGINSYM 131
+#define ENDSYM 132
+#define IFSYM 133
+#define THENSYM 134
+#define CALLSYM 135
+#define WHILESYM 136
+#define DOSYM 137
+#define READSYM 138
+#define WRITESYM 139
+#define ODDSYM 140
 
 using namespace std;
 
@@ -58,8 +66,8 @@ bool isBlank(char ch)
 	else
 		return false;
 }
-char key[12][10] = { "const","var", "procedure", "begin", "end", "if", "then", 
-					 "call", "while", "do", "read", "write" };
+char key[13][10] = { "const","var", "procedure", "begin", "end", "if", "then", 
+					 "call", "while", "do", "read", "write", "odd" };
 
 class lexer
 {
@@ -69,7 +77,11 @@ public:
 	std::vector<string> getNum();
 	std::vector<int> getId();
 	std::vector<int> getSym();
+	int getToken();
+	int keepToken();
+	void resetToken(int reset);
 private:
+	int tokenInx = 0;
 	std::vector<string> num, keep;
 	std::vector<int> sym, id;
 	std::map<string, int> index;

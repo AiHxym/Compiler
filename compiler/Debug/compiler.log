@@ -1,2 +1,7 @@
-﻿  compiler.cpp
-  compiler.vcxproj -> C:\Users\xym63\Desktop\compiler\Debug\compiler.exe
+﻿lexer.obj : error LNK2005: "bool __cdecl isBlank(char)" (?isBlank@@YA_ND@Z) 已经在 compiler.obj 中定义
+lexer.obj : error LNK2005: "bool __cdecl isDelimiter(char)" (?isDelimiter@@YA_ND@Z) 已经在 compiler.obj 中定义
+lexer.obj : error LNK2005: "bool __cdecl isDigit(char)" (?isDigit@@YA_ND@Z) 已经在 compiler.obj 中定义
+lexer.obj : error LNK2005: "bool __cdecl isLetter(char)" (?isLetter@@YA_ND@Z) 已经在 compiler.obj 中定义
+lexer.obj : error LNK2005: "bool __cdecl isOperators(char)" (?isOperators@@YA_ND@Z) 已经在 compiler.obj 中定义
+lexer.obj : error LNK2005: "char (* key)[10]" (?key@@3PAY09DA) 已经在 compiler.obj 中定义
+F:\GitHub\Compiler\Debug\compiler.exe : fatal error LNK1169: 找到一个或多个多重定义的符号

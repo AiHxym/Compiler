@@ -176,3 +176,18 @@ std::vector<int> lexer::getSym()
 {
 	return sym;
 }
+
+int lexer::getToken()
+{
+	return sym[tokenInx++];
+}
+
+void lexer::resetToken(int reset)
+{
+	tokenInx = reset;
+}
+
+int lexer::keepToken()
+{
+	return tokenInx;
+}
