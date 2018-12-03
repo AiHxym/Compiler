@@ -1,4 +1,5 @@
 #include "lexer.h"
+#include "methods.h"
 
 lexer::lexer(string filename)
 {
@@ -7,7 +8,7 @@ lexer::lexer(string filename)
 	assert(infile.is_open());   //若失败,则输出错误消息,并终止程序运行 
 
 	string sourcecode;
-	while (getline(cin, sourcecode))
+	while (getline(infile, sourcecode))
 	{
 		for (int i = 0; i < sourcecode.length(); i)
 		{
@@ -126,10 +127,10 @@ lexer::lexer(string filename)
 				}
 				else
 				{
-					if (sourcecode[i] != '\0')
+					if (sourcecode[i] != '.')
 					{
 						printf("(error,%c)\n", sourcecode[i]);
-						if (sourcecode[i + 1] != '\0')
+						if (sourcecode[i + 1] != '.')
 							++i;
 					}
 					else
@@ -190,4 +191,9 @@ void lexer::resetToken(int reset)
 int lexer::keepToken()
 {
 	return tokenInx;
+}
+
+void lexer::pushToken()
+{
+	--tokenInx;
 }
