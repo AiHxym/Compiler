@@ -180,7 +180,10 @@ std::vector<int> lexer::getSym()
 
 int lexer::getToken()
 {
-	return sym[tokenInx++];
+	if (tokenInx < sym.size())
+		return sym[tokenInx++];
+	else
+		return -1;
 }
 
 void lexer::resetToken(int reset)

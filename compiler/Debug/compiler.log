@@ -1,5 +1,3 @@
-﻿  lexer.cpp
-f:\github\compiler\compiler\lexer.cpp(13): warning C4018: “<”: 有符号/无符号不匹配
-f:\github\compiler\compiler\lexer.cpp(63): warning C4018: “<”: 有符号/无符号不匹配
-f:\github\compiler\compiler\lexer.cpp(149): warning C4018: “<”: 有符号/无符号不匹配
+﻿  compiler.cpp
+f:\github\compiler\compiler\compiler.cpp(37): warning C4018: “<”: 有符号/无符号不匹配
   compiler.vcxproj -> F:\GitHub\Compiler\Debug\compiler.exe
