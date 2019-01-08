@@ -1,2 +1,2 @@
 # Compiler
-A PL/0 
+A PL/0 compiler
